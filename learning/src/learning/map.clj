@@ -19,3 +19,6 @@
 (println (str "The Nested name ", (get-in person [:address :policeStation :name] "No Police Statin")))
 ;; access nested element using pipeline
 (println (str "The Nested name ", (-> person :address :country :name)))
+(println (str "Print all the values", (vals person)))
+(println (str "Print all the keys", (keys person)))
+
