@@ -14,6 +14,8 @@
 (defn nested-keys [mapObj]
   (map (fn [[k v]] (if (map? v) (conj (nested-keys v) k) k)) mapObj))
   
+(defn nested-keys-rev [mapObj]
+  (->> mapObj (map (fn [[k v]] (if (map? v) (conj (nested-keys v) k) k)))))
 
 ;; access map data
 (println (str "The name of the person is ", (:name person)))
@@ -24,5 +26,6 @@
 ;; access nested element using pipeline
 (println (str "The Nested name ", (-> person :address :country :name)))
 (println (str "Print all the values", (vals person)))
-(println (str "Print all the keys", (keys person)))
+(println "Print all the keys" (nested-keys person))
+(println "Print all the keys" (nested-keys-rev person))
 
