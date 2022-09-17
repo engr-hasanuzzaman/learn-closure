@@ -11,6 +11,10 @@
              })
 (println person)
 
+(defn nested-keys [mapObj]
+  (map (fn [[k v]] (if (map? v) (conj (nested-keys v) k) k)) mapObj))
+  
+
 ;; access map data
 (println (str "The name of the person is ", (:name person)))
 (println (str "The age of the person is ", (get person :age)))
