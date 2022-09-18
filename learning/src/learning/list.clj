@@ -23,3 +23,8 @@
 (println (nth l 1))
 (println (rest l))
 (println (for [num l] (* num 2)))
+
+;; list as stack
+(def stack '(:age :name :address))
+(println (peek stack))
+(println (pop stack))
