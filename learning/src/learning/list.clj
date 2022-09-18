@@ -16,3 +16,10 @@
 (def nums2 (conj nums 10 11))
 (println nums2 nums)
 
+;; list
+(def l `(1 2 3 4 5))
+(println (first l))
+(println (last l))
+(println (nth l 1))
+(println (rest l))
+(println (for [num l] (* num 2)))
