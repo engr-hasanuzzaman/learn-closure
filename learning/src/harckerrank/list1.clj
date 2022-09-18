@@ -11,3 +11,6 @@
 (fn[lst] (reduce + (for [_ lst] 1)))
 
 (fn [lst] (reduce + (map (fn [_] 1) lst)))
+
+;; convert negtive number to positive
+(fn [lst] (map (fn [n] (if (neg? n) (* -1 n) n)) lst))
