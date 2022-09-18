@@ -7,3 +7,7 @@
 ;; find size without use count
 (defn length [lst]
   (if (empty? lst) 0 (+ 1 (length (rest lst)))))
+
+(fn[lst] (reduce + (for [_ lst] 1)))
+
+(fn [lst] (reduce + (map (fn [_] 1) lst)))
