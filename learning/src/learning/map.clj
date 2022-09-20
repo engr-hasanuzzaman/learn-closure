@@ -29,3 +29,9 @@
 (println "Print all the keys" (nested-keys person))
 (println "Print all the keys" (nested-keys-rev person))
 
+;; map with multiple seq
+(def names [:hasan :uz :zaman])
+(def ages [32 33 34])
+(defn make-map [name age]
+  {name age })
+(println (map make-map names ages))
