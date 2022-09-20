@@ -32,7 +32,15 @@
                (into final-body-parts
                      (set [part (matching-part part)])))))))
 
-(println (symmetrize-body-parts asym-hobbit-body-parts))
+(defn better-symmetrize-body-parts
+  "Expects a seq of maps that have a :name and :size"
+  [asym-body-parts]
+  (reduce (fn [final-body-parts part]
+            (into final-body-parts (set [part (matching-part part)])))
+          []
+          asym-body-parts))
+
+(println (= (symmetrize-body-parts asym-hobbit-body-parts) (better-symmetrize-body-parts asym-hobbit-body-parts)))
 
 ;; basic loop practice
 ;; loop create an anonymous function and using recur we can call that recursively
