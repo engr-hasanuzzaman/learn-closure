@@ -34,3 +34,9 @@
 
 (println (symmetrize-body-parts asym-hobbit-body-parts))
 
+;; basic loop practice
+(loop [count 0]
+  (println "Count is: " count)
+  (if (> count 3)
+    (println "End")
+    (recur (inc count))))
