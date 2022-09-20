@@ -22,6 +22,12 @@
 (defn first-solution []
   (println v l man skill))
 
+;; 4th (Write a function, mapset, that works like map except the return value is a set:)
+(defn mapset [fn lst]
+  (set (map fn lst)))
+
+(defn fourth-solution []
+  (println "return with input [ 1 1 2 2]" (mapset inc [1 1 2 2])))
 
 ;; run the solution
 (println "->first solution")
@@ -30,3 +36,5 @@
 (second-solution)
 (println "->3rd solution")
 (third-solution)
+(println "->4th solution")
+(fourth-solution)
