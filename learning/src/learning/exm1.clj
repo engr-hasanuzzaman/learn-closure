@@ -35,6 +35,7 @@
 (println (symmetrize-body-parts asym-hobbit-body-parts))
 
 ;; basic loop practice
+;; loop create an anonymous function and using recur we can call that recursively
 (loop [count 0]
   (println "Count is: " count)
   (if (> count 3)
