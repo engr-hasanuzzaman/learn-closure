@@ -35,3 +35,15 @@
 (defn make-map [name age]
   {name age })
 (println (map make-map names ages))
+
+;; apply multiple function using map
+(defn sum [lst]
+  (reduce + lst))
+
+(defn avg [lst]
+  (/ (sum lst) (count lst)))
+
+(defn state [lst]
+  (map #(% lst) [sum count avg]))
+
+(println "After appling sum avg count on [80 1 44 13 6]" (state [80 1 44 13 6]))
