@@ -28,3 +28,14 @@
 (def stack '(:age :name :address))
 (println (peek stack))
 (println (pop stack))
+
+;; reduce
+(prn(reduce + ages))
+;; reduce params: function, optional_initial val, seq
+(prn (reduce + 100 ages))
+;; product new map reducing ages
+(prn (reduce (fn [final-result age]
+               (conj final-result {:age age})) 
+             []
+             ages))
+
