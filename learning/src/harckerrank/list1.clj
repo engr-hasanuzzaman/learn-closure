@@ -14,3 +14,7 @@
 
 ;; convert negtive number to positive
 (fn [lst] (map (fn [n] (if (neg? n) (* -1 n) n)) lst))
+
+;; reverse list without using reverse function
+(fn [lst]
+  (reduce #(conj %1 %2) `() lst))
