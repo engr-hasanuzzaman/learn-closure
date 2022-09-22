@@ -30,12 +30,17 @@
 (println (pop stack))
 
 ;; reduce
-(prn(reduce + ages))
+(prn (reduce + ages))
 ;; reduce params: function, optional_initial val, seq
 (prn (reduce + 100 ages))
 ;; product new map reducing ages
 (prn (reduce (fn [final-result age]
-               (conj final-result {:age age})) 
+               (conj final-result {:age age}))
              []
              ages))
 
+;; practice take & drop function
+(take 2 (range 10))
+(drop 2 (range 10))
+(take-while #(<= % 6) (range 20))
+(drop-while #(<= % 6) (range 20))
