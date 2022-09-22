@@ -44,3 +44,6 @@
 (drop 2 (range 10))
 (take-while #(<= % 6) (range 20))
 (drop-while #(<= % 6) (range 20))
+
+;; use time method to check execution time
+(time (drop-while #(<= % 6) (range 20)))
