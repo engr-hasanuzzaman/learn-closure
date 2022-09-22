@@ -47,3 +47,12 @@
 
 ;; use time method to check execution time
 (time (drop-while #(<= % 6) (range 20)))
+
+;; return n-th fibo
+;; (def n (Integer/parseInt (read-line)))
+(defn fibo [n]
+    ;; (println "with in fibo " n)
+  (if (<= n 2)
+    (- n 1)
+    (+ (fibo (- n 1)) (fibo (- n 2)))))
+(println (fibo 5))
