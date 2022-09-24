@@ -56,3 +56,11 @@
     (- n 1)
     (+ (fibo (- n 1)) (fibo (- n 2)))))
 (println (fibo 5))
+
+;; fibonacci using recur
+(defn nth-fibo [n]
+  (let [fibo (fn [one two iteration]
+               (if (= n iteration)
+                 one
+                 (recur two (+ two one) (inc iteration))))]
+    (fibo 0N 1N 0)))
