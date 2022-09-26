@@ -1,0 +1,1 @@
+- `recur` create tail recursion which will not create stack overflow errro but normal recursion may create
