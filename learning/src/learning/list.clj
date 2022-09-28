@@ -69,3 +69,5 @@
 ;; infinite sequence
 ;; repeat creat infinite loop
 (take 5 (repeat "test"))
+
+(take 5 (repeatedly (fn [] (rand 10))))
