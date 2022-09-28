@@ -72,3 +72,8 @@
 
 (take 5 (repeatedly (fn [] (rand 10))))
 (take 5 (repeatedly (fn [] (rand-int 10))))
+
+;; lazy odd-number sequence
+(defn odd-number 
+  ([] (odd-number 1))
+  ([n] (cons n (lazy-seq (odd-number (+ n 2))))))
