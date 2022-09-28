@@ -65,3 +65,7 @@
                  (recur two (+ two one) (inc iteration))))]
     (fibo 0N 1N 0)))
 
+
+;; infinite sequence
+;; repeat creat infinite loop
+(take 5 (repeat "test"))
