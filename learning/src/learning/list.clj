@@ -71,3 +71,4 @@
 (take 5 (repeat "test"))
 
 (take 5 (repeatedly (fn [] (rand 10))))
+(take 5 (repeatedly (fn [] (rand-int 10))))
