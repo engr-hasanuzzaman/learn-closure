@@ -77,3 +77,6 @@
 (defn odd-number 
   ([] (odd-number 1))
   ([n] (cons n (lazy-seq (odd-number (+ n 2))))))
+
+;; convert sequence to vector
+(into [] (map inc (range 10)))

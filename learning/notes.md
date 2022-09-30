@@ -1,2 +1,3 @@
 - `recur` create tail recursion which will not create stack overflow errro but normal recursion may create
 - use the following code to load file on clj repl `(load-file "src/learning/list.clj")`
+- `map` return `seq`
