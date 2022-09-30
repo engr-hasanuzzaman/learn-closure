@@ -80,3 +80,6 @@
 
 ;; convert sequence to vector
 (into [] (map inc (range 10)))
+
+;; \
+(into {:favorite-emotion "gloomy"} [[:sunlight-reaction "Glitter!"]])
