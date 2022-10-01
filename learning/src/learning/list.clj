@@ -83,3 +83,6 @@
 
 ;; \
 (into {:favorite-emotion "gloomy"} [[:sunlight-reaction "Glitter!"]])
+
+(conj [1] [2]) ;; [1 [2]]
+(into [1] [2]) ;; [1 2]
