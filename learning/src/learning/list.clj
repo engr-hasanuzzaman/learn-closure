@@ -84,5 +84,8 @@
 ;; \
 (into {:favorite-emotion "gloomy"} [[:sunlight-reaction "Glitter!"]])
 
+;; both arguments must be collection
 (conj [1] [2]) ;; [1 [2]]
+(conj {:name "sumon"} [:age 23] [:foo 23] [1 2])
+
 (into [1] [2]) ;; [1 2]
