@@ -21,3 +21,8 @@
                  (map vampire-related-details social-security-numbers))))
 
 (sort [1 4 7 1 0 -12])
+
+;; function to generate random string with given length
+(defn generate-string
+  ([] (generate-string 10))
+  ([length] (apply str (take length (repeatedly #(char (+ (rand-int 26) 65)))))))

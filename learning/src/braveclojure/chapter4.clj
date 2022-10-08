@@ -13,3 +13,7 @@
           {}
           mp))
 
+function to generate random string with given length
+(defn generate-string
+  ([] (generate-string 10))
+  ([length] (apply str (take length (repeatedly #(char (+ (rand-int 26) 65)))))))
