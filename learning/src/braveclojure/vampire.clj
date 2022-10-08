@@ -19,3 +19,5 @@
   [social-security-numbers]
   (first (filter vampire?
                  (map vampire-related-details social-security-numbers))))
+
+(sort [1 4 7 1 0 -12])
