@@ -13,7 +13,10 @@
           {}
           mp))
 
-function to generate random string with given length
+;; function to generate random string with given length
 (defn generate-string
   ([] (generate-string 10))
   ([length] (apply str (take length (repeatedly #(char (+ (rand-int 26) 65)))))))
+
+(defn generate-user []
+  (hash-map :name (generate-string (+ 5 (rand-int 10))) :age (+ 20 (rand-int 20))))
