@@ -20,3 +20,7 @@
 
 (defn generate-user []
   (hash-map :name (generate-string (+ 5 (rand-int 10))) :age (+ 20 (rand-int 20))))
+
+(defn generate-users 
+  ([] (generate-users 5))
+  ([numbers] (take numbers (repeatedly #(generate-user)))))
