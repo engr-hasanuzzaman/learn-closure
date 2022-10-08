@@ -24,3 +24,9 @@
 (defn generate-users 
   ([] (generate-users 5))
   ([numbers] (take numbers (repeatedly #(generate-user)))))
+
+;; sort
+(sort [2 1 9 0 12])
+;; custom sort logic
+(sort-by #(:age %) (generate-users 5))
+(sort-by #(:name %) (generate-users 5))
